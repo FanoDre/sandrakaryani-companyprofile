@@ -1,9 +1,7 @@
 import Link from "next/link";
 import localFont from "next/font/local";
 
-
 const upakarti = localFont({ src: '../Fonts/Upakarti-Serong.woff2' })
-
 
 export default function Footer() {
   return (

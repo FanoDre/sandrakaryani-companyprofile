@@ -2,10 +2,12 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { TypeAnimation } from "react-type-animation"
 import { Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
+
 
 const playFair = Playfair_Display({ subsets: ['latin'] })
+const upakarti = localFont({ src: '../Fonts/Upakarti-Serong.woff2' })
 
 export default function HeroSection() {
   return (
@@ -18,36 +20,15 @@ export default function HeroSection() {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-5xl sm:text-5xl lg:text-6xl md:text-6xl lg:leading-normal font-extrabold">
-            SANDRA
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-700 via-yellow-300 to-yellow-900">
-              <TypeAnimation
-                sequence={[
-                  "K",
-                  500,
-                  "KA",
-                  500,
-                  "KAR",
-                  500,
-                  "KARY",
-                  500,
-                  "KARYA",
-                  500,
-                  "KARYAN",
-                  500,
-                  "KARYANI",
-                  500,
-
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontFamily: 'sans-serif' }}
-                repeat={Infinity}
-              />
-
-            </span>
+            
+            <Link href={"/"}
+              className={`${upakarti.className} text-9xl md:text-9xl lg:text-9xl font-light`} id="skLogo"
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-700 via-yellow-400 to-yellow-900">Sandra</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-900 via-yellow-400 to-yellow-900"> Karyani</span>
+            </Link>
           </h1>
-          <p className="text-white text-sm sm:text-md md:text-md lg:text-md mb-5">
+          <p className={`${playFair.className} text-white text-sm sm:text-md md:text-md lg:text-md mb-5 tracking-wide lg:pr-16`}>
             Batik Sandra Karyani mengembangkan batik Solo dengan dipadukan motif modern mengikuti tren fashion
             Pengembangan motif desain mengikuti perkembangan fashion internasional
             Produksi dilakukan di Solo dengan memberdayakan potensi sumber daya manusia yang tidak memiliki ruang mengembangkan kompetensi dalam berkarya

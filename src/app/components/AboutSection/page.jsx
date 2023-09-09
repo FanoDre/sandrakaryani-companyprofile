@@ -4,6 +4,9 @@ import Image from "next/image"
 import { useState, useTransition } from "react"
 import { tabData } from "@/app/utils"
 import TabButton from "./TabButton"
+import { Playfair_Display } from "next/font/google";
+
+const playFair = Playfair_Display({ subsets: ['latin'] })
 
 export default function AboutSection() {
   const [tab, setTab] = useState("visi")
@@ -20,7 +23,7 @@ export default function AboutSection() {
         <Image src="/images/about-image.jpg" width={500} height={500} alt="About Image" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Us</h2>
-          <p className="text-base lg:text-lg">
+          <p className={`${playFair.className} text-base lg:text-lg`}>
             Batik Sandra Karyani mengembangkan batik Solo dengan dipadukan motif modern mengikuti tren fashion
             Pengembangan motif desain mengikuti perkembangan fashion internasional.
           </p>

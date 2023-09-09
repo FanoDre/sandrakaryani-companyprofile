@@ -14,7 +14,7 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <nav className="fixed w-full z-10 dark:border-b dark:border-yellow-500 backdrop-blur-lg">
+    <nav className="fixed w-full z-[100] dark:border-b dark:border-yellow-500 backdrop-blur-lg">
       <div className="flex relative gap-2 container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link href={"/"}
           className={`${upakarti.className} text-2xl md:text-3xl font-light`} id="skLogo"
